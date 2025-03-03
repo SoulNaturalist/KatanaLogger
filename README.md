@@ -15,3 +15,33 @@ Logger on python for my project, easy usage🌀
 ### Wait progress example🆙
 ![Code_jh4ej0Nkdu](https://github.com/user-attachments/assets/9948bca7-15eb-4a68-8e3c-3ef30fbbe368)
 
+![изображение](https://github.com/user-attachments/assets/6bebc04b-41f1-4b92-8548-43784183d326)
+
+```python
+logger = Logger()
+logger.wait_progress(text="Wait install📦", advance=1, finish_msg="Good Job!")
+```
+
+```python
+logger = Logger()
+logger.perfect_log("App warning: env files not exist!", "warning")
+```
+![изображение](https://github.com/user-attachments/assets/1b188994-e3bc-4b0f-bc1d-80af2e03c9b2)
+
+
+
+
+![изображение](https://github.com/user-attachments/assets/d1bad9c1-a1b0-491b-b339-38b07aecdf80)
+
+
+```python
+logger = Logger()
+logger.perfect_log("App error: syntax error", "failed")
+```
+
+
+![изображение](https://github.com/user-attachments/assets/c85be704-d466-4592-8a3a-4f5391801adb)
+```python
+logger = Logger()
+logger.perfect_log("Starting app", "success")
+```
