@@ -45,3 +45,14 @@ logger.perfect_log("App error: syntax error", "failed")
 logger = Logger()
 logger.perfect_log("Starting app", "success")
 ```
+
+
+```python
+@Decorators.ms
+def test():
+    for i in range(1, 33):
+        print(i)
+```
+
+![Code_kJVo9ak8Hp](https://github.com/user-attachments/assets/d26c38a4-665f-44ca-ac66-1d4b32cd9233)
+
