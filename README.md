@@ -12,3 +12,6 @@ Logger on python for my project, easy usage
 
 ![Code_MrLOVw4rCU](https://github.com/user-attachments/assets/4595b7c7-22dc-4fe8-9971-ad16fae2cc15)
 
+### Wait progress example🆙
+![Code_jh4ej0Nkdu](https://github.com/user-attachments/assets/9948bca7-15eb-4a68-8e3c-3ef30fbbe368)
+
