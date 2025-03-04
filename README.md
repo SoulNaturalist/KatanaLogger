@@ -52,6 +52,7 @@ logger.perfect_log("Starting app", "success")
 def test():
     for i in range(1, 33):
         print(i)
+#and have async wrapper for check ms runtime for async functions
 ```
 
 ![Code_kJVo9ak8Hp](https://github.com/user-attachments/assets/d26c38a4-665f-44ca-ac66-1d4b32cd9233)
