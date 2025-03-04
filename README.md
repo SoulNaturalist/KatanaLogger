@@ -13,9 +13,9 @@ Logger on python for my project, easy usage🌀
 ![Code_MrLOVw4rCU](https://github.com/user-attachments/assets/4595b7c7-22dc-4fe8-9971-ad16fae2cc15)
 
 
-# Just Usage
+## Just Usage
 ```python
-logger = Logger(emoji=False)
+logger = Logger()
 await logger.debug("CSRF token not found!")
 await logger.log("App is running")
 await logger.die("Service error 55 line")
@@ -23,8 +23,18 @@ await logger.die("Service error 55 line")
 ![изображение](https://github.com/user-attachments/assets/8ad5f279-57c8-4814-b5cd-c77b8f693b49)
 
 
+## Traceback Parsing
+```python
+try:
+    1 / 0
+except Exception as e:
+    await logger.log_traceback(e)
+```
+![изображение](https://github.com/user-attachments/assets/b58b1f4b-20b2-4d0d-b50e-9561af401001)
 
-## Tools
+
+
+### Tools
 
 ### Wait progress example🆙
 ![Code_jh4ej0Nkdu](https://github.com/user-attachments/assets/9948bca7-15eb-4a68-8e3c-3ef30fbbe368)
@@ -38,6 +48,7 @@ def test():
         print(i)
 #and have async wrapper for check ms runtime for async functions
 ```
-
 ![Code_kJVo9ak8Hp](https://github.com/user-attachments/assets/d26c38a4-665f-44ca-ac66-1d4b32cd9233)
+
+
 
