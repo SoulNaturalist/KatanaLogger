@@ -46,6 +46,8 @@ except Exception as e:
 def test():
     for i in range(1, 33):
         print(i)
+
+
 #OR ASYNC
 
 @Decorators.ms
