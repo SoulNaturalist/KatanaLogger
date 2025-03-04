@@ -17,35 +17,24 @@ Logger on python for my project, easy usage🌀
 
 ![изображение](https://github.com/user-attachments/assets/6bebc04b-41f1-4b92-8548-43784183d326)
 
+
+
+# Just Usage
+```python
+logger = Logger(emoji=False)
+await logger.debug("CSRF token not found!")
+await logger.log("App is running")
+await logger.die("Service error 55 line")
+```
+![изображение](https://github.com/user-attachments/assets/8ad5f279-57c8-4814-b5cd-c77b8f693b49)
+
+
+
+## Tools
 ```python
 logger = Logger()
 logger.wait_progress(text="Wait install📦", advance=1, finish_msg="Good Job!")
 ```
-
-```python
-logger = Logger()
-logger.perfect_log("App warning: env files not exist!", "warning")
-```
-![изображение](https://github.com/user-attachments/assets/1b188994-e3bc-4b0f-bc1d-80af2e03c9b2)
-
-
-
-
-![изображение](https://github.com/user-attachments/assets/d1bad9c1-a1b0-491b-b339-38b07aecdf80)
-
-
-```python
-logger = Logger()
-logger.perfect_log("App error: syntax error", "failed")
-```
-
-
-![изображение](https://github.com/user-attachments/assets/c85be704-d466-4592-8a3a-4f5391801adb)
-```python
-logger = Logger()
-logger.perfect_log("Starting app", "success")
-```
-
 
 ```python
 @Decorators.ms
