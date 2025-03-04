@@ -3,7 +3,6 @@ import time
 import random
 import inspect
 import os, sys
-import asyncio
 import platform
 import traceback
 from datetime import datetime
@@ -129,6 +128,3 @@ class Logger:
                 time.sleep(time_to_step)
         print("\033[1m" + Fore.GREEN + finish_msg + "\033[0m")
         return ""
-
-if __name__ == "__main__":
-    asyncio.run(main())
