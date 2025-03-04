@@ -10,8 +10,6 @@ from datetime import datetime
 from rich.progress import Progress
 from colorama import Fore, Style, init
 
-console = Console()
-
 init(autoreset=True)
 
 class Decorators:
@@ -129,7 +127,7 @@ class Logger:
             while not progress.finished:
                 progress.update(task1, advance=advance)
                 time.sleep(time_to_step)
-        console.print(finish_msg, style="bold green")
+        print("\033[1m" + Fore.GREEN + finish_msg + "\033[0m")
         return ""
 
 if __name__ == "__main__":
