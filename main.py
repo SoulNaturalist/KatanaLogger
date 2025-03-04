@@ -133,15 +133,5 @@ class Logger:
         console.print(finish_msg, style="bold green")
         return ""
 
-async def main():
-    logger = Logger()
-    # await logger.debug("CSRF token not found!")
-    # await logger.log("App is running")
-    # await logger.die("Service down!")
-    try:
-        1 / 0
-    except Exception as e:
-        await logger.log_traceback(e)
-
 if __name__ == "__main__":
     asyncio.run(main())
