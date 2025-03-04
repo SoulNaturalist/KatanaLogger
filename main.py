@@ -7,7 +7,6 @@ import asyncio
 import platform
 import traceback
 from datetime import datetime
-from rich.console import Console
 from rich.progress import Progress
 from colorama import Fore, Style, init
 
