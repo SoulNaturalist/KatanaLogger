@@ -1,9 +1,11 @@
-import os
+
 import time
 import random
 import inspect
+import os, sys
 import asyncio
 import platform
+import traceback
 from datetime import datetime
 from rich.console import Console
 from rich.progress import Progress
@@ -49,16 +51,16 @@ class Decorators:
             print(Fore.MAGENTA + f"Функция '{func.__name__}' выполнена за {execution_time:.2f} мс 👎")
 
 class Logger:
-    __slots__ = ('colors', 'random_color', 'bold', 'emoji', 'time_log', 'msg_default_logger', 'console_use')
+    __slots__ = ('colors', 'random_color', 'bold', 'emoji', 'time_log', 'msg_default_logger')
     def __init__(self, colors: list = [], random_color: bool = False, bold: bool = True, 
-                 emoji: dict = None,
-                 time_log: bool = True, msg_default_logger: bool = True, console_use: bool = False):
+    emoji: dict = None,
+    time_log: bool = True, msg_default_logger: bool = True):
+        
         self.colors = colors
         self.random_color = random_color
         self.bold = bold
         self.time_log = time_log
         self.msg_default_logger = msg_default_logger
-        self.console_use = console_use
         if emoji is None or emoji is False:
             self.emoji = {}
         elif emoji is True:
@@ -114,9 +116,12 @@ class Logger:
 
     async def log(self, log_msg: str):
         await self.perfect_log(log_msg, "success")
+    async def log_traceback(self, exception: Exception):
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        traceback_details = traceback.format_exception(exc_type, exc_value, exc_traceback)
+        traceback_message = "".join(traceback_details)
+        await self.perfect_log(f"Exception occurred:\n{traceback_message}", "failed")
         
-
-
 
     @staticmethod
     def wait_progress(time_to_step: float = 0.2, advance: float = 0.5, color: str = "red", text: str = "", total: int = 1000, finish_msg: str = ""):
@@ -129,10 +134,14 @@ class Logger:
         return ""
 
 async def main():
-    logger = Logger(emoji=False)
-    await logger.debug("CSRF token not found!")
-    await logger.log("App is running")
-    await logger.die("Service error 55 line")
+    logger = Logger()
+    # await logger.debug("CSRF token not found!")
+    # await logger.log("App is running")
+    # await logger.die("Service down!")
+    try:
+        1 / 0
+    except Exception as e:
+        await logger.log_traceback(e)
 
 if __name__ == "__main__":
     asyncio.run(main())
