@@ -120,7 +120,7 @@ class Logger:
         
 
     @staticmethod
-    def wait_progress(time_to_step: float = 0.2, advance: float = 0.5, color: str = "red", text: str = "", total: int = 1000, finish_msg: str = ""):
+    async def wait_progress(time_to_step: float = 0.2, advance: float = 0.5, color: str = "red", text: str = "", total: int = 1000, finish_msg: str = ""):
         with Progress() as progress:
             task1 = progress.add_task(f"[{color}]{text}", total=total)
             while not progress.finished:
