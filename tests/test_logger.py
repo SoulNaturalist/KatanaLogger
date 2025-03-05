@@ -1,7 +1,7 @@
 import time
 import asyncio
 import unittest
-from katanalogger import Logger
+from KatanaLogger import Logger
 
 class TestKatanaLoggerStress(unittest.TestCase):
     def setUp(self):
@@ -18,7 +18,7 @@ class TestKatanaLoggerStress(unittest.TestCase):
                 await self.logger.log("Stress test log message")
             end_time = time.time()
             print(f"Stress test for 'log': {end_time - start_time:.2f} seconds")
-        self.run_test(test())
+        asyncio.run(test())
 
     def test_stress_debug(self):
         async def test():
@@ -27,7 +27,7 @@ class TestKatanaLoggerStress(unittest.TestCase):
                 await self.logger.debug("Stress test debug message")
             end_time = time.time()
             print(f"Stress test for 'debug': {end_time - start_time:.2f} seconds")
-        self.run_test(test())
+        asyncio.run(test())
 
     def test_stress_die(self):
         async def test():
@@ -36,7 +36,7 @@ class TestKatanaLoggerStress(unittest.TestCase):
                 await self.logger.die("Stress test critical error")
             end_time = time.time()
             print(f"Stress test for 'die': {end_time - start_time:.2f} seconds")
-        self.run_test(test())
+        asyncio.run(test())
 
     def test_stress_log_traceback(self):
         async def test():
@@ -48,7 +48,7 @@ class TestKatanaLoggerStress(unittest.TestCase):
                     await self.logger.log_traceback(e)
             end_time = time.time()
             print(f"Stress test for 'log_traceback': {end_time - start_time:.2f} seconds")
-        self.run_test(test())
+        asyncio.run(test())
 
     def test_stress_wait_progress(self):
         async def test():
@@ -57,7 +57,7 @@ class TestKatanaLoggerStress(unittest.TestCase):
                 self.logger.wait_progress(time_to_step=0.1, advance=1, text="Loading...", finish_msg="Done!")
             end_time = time.time()
             print(f"Stress test for 'wait_progress': {end_time - start_time:.2f} seconds")
-        self.run_test(test())
+        asyncio.run(test())
 
 if __name__ == "__main__":
     unittest.main()
