@@ -1,6 +1,6 @@
-import unittest
-import asyncio
 import time
+import asyncio
+import unittest
 from katanalogger import Logger
 
 class TestKatanaLoggerStress(unittest.TestCase):
