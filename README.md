@@ -3,8 +3,6 @@ Fast logger with lots of settings and cool output🥷
 <br/>
 Logger on python for my project, easy usage🌀
 
-### Install
-```pip install katanalogger```
 
 
 ### Preview with emoji 🪄
@@ -58,6 +56,9 @@ async def test():
     for i in range(1, 33):
         print(i)
 ```
+
+### Install
+```pip install katanalogger```
 ![Code_kJVo9ak8Hp](https://github.com/user-attachments/assets/d26c38a4-665f-44ca-ac66-1d4b32cd9233)
 
 
