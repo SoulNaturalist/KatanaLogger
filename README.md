@@ -3,6 +3,8 @@ Fast logger with lots of settings and cool output🥷
 <br/>
 Logger on python for my project, easy usage🌀
 
+# Install
+```pip install katanalogger```
 
 
 ### Preview with emoji 🪄
@@ -15,6 +17,7 @@ Logger on python for my project, easy usage🌀
 
 ## Just Usage
 ```python
+from katanalogger import Logger
 logger = Logger()
 await logger.debug("CSRF token not found!")
 await logger.log("App is running")
