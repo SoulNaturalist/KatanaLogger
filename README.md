@@ -63,9 +63,11 @@ async def test():
 
 ### Install
 install via pip:
+<br/>
 ```$ pip install katanalogger```
 
 install via poetry:
+<br/>
 ```$ poetry add katanalogger```
 
 
